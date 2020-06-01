@@ -2,8 +2,6 @@ package com.wx.test;
 
 
 
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Test2 {
@@ -14,7 +12,7 @@ public class Test2 {
         Person person11 = new Person("wddw",GENDER.MALE);
         Person person2 = new Person("wxdd",GENDER.FEMALE);
         Stream stream = Stream.of(person,person1,person11,person2);
-        System.out.println(stream.collect(Collectors.toMap(person.getSex(),person.getName())));
+       // System.out.println(stream.collect(Collectors.toMap(person.getSex(),person.getName())));
         //List map = List.of(1);
        // List list = new ArrayList(map);
        // list.stream().forEach(i ->list.add(i + 1));

@@ -37,7 +37,7 @@ public class MyThreadPoolDemo {
             return null;
         };
 
-        Object d=threadPool.invokeAll(List.of(task,task1,task2));
-        System.out.println( d.get(0).g);
+       // Object d=threadPool.invokeAll(List.of(task,task1,task2));
+       // System.out.println( d.get(0).g);
     }
 }
