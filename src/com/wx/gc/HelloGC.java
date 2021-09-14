@@ -15,9 +15,17 @@ package com.wx.gc;
  *
  * E:\codes\java_codes\2020interviewPractice\src\com\wx\thread\threads>jinfo -flag UseSerialGC 4968
  * -XX:-UseSerialGC
+ * -XX:MetaspaceSize
+ * -XX:MaxTenuringThreshold=15
+ * -XX:+PrintFlagsInitial
+ *java -XX:+PrintFlagsFinal -version  --最终修改的值
+ *java -XX:+printFlagsInitial         --初始值
+ *-XX:+PrintCommand
+ * jinfo -flags 5040 -- 5040表示进程号，查出所有的参数
  */
 public class HelloGC {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("***************HelloGC");
+        Thread.sleep(Integer.MAX_VALUE);
     }
 }
