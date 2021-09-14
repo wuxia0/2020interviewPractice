@@ -11,18 +11,28 @@ import java.util.concurrent.*;
  */
 public class MyThreadPoolDemo {
     public static void main(String[] args) {
+        threadPoolExcetorsByWriter();
+        //threadPoolInit();
+    }
+
+    private static void threadPoolExcetorsByWriter() {
         //手写线程池
-//        ExecutorService mythreadPool = new ThreadPoolExecutor
-//                (2,
-//                5,
-//                0L, TimeUnit.MILLISECONDS,
-//                 new LinkedBlockingDeque(18),
-//                 Executors.defaultThreadFactory(),
-//                 new ThreadPoolExecutor.DiscardOldestPolicy());
-        threadPoolInit();
+        ExecutorService mythreadPool = new ThreadPoolExecutor
+                (2,
+                4,
+                0L, TimeUnit.MILLISECONDS,
+                 new LinkedBlockingDeque(2),
+                 Executors.defaultThreadFactory(),
+                 new ThreadPoolExecutor.DiscardPolicy());
+        for (int i = 1; i <= 10; i++) {
+            mythreadPool.execute(()->{
+                System.out.println(Thread.currentThread().getName() + "\t办理业务");
+            });
+        }
     }
 
     public static void threadPoolInit(){
+        //Excetors一般不使用，容易耗完资源，默认用的是LikedBlockQueue
         ExecutorService threadPool = Executors.newFixedThreadPool(3);
         Callable task=()->"Task ss";
         Callable task1=()->{

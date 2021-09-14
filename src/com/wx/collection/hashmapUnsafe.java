@@ -11,8 +11,8 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class hashmapUnsafe {
     public static void main(String[] args) {
-       // Map map = new HashMap<>();//线程不安全 ConcurrentModificationException
-       // Map map = Collections.synchronizedMap(new HashMap());//线程安全
+        Map map1 = new HashMap<>();//线程不安全 ConcurrentModificationException
+        Map map2 = Collections.synchronizedMap(new HashMap());//线程安全
         Map map = new ConcurrentHashMap(new HashMap());
         for (int i=0;i<30;i++){
             new Thread(()->{
