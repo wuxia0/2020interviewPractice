@@ -1,9 +1,27 @@
-package com.wx.refect;
+package com.wx.reflect;
 
 public class Student {
     private String name;
     public String desc;
     protected int age;
+    private String like;
+    private String classroom;
+
+    public String getLike() {
+        return like;
+    }
+
+    public void setLike(String like) {
+        this.like = like;
+    }
+
+    public String getClassroom() {
+        return classroom;
+    }
+
+    public void setClassroom(String classroom) {
+        this.classroom = classroom;
+    }
 
     private void eat(String name){
         System.out.println(name+" eating....");

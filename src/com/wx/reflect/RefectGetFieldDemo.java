@@ -1,4 +1,4 @@
-package com.wx.refect;
+package com.wx.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
