@@ -11,7 +11,7 @@ import java.lang.reflect.Modifier;
  * 构造方法对象（主要用来创建对象），成员方法对象（主要用来执行方法），以及获取之后的一些操作，
  * 重点就是获取后的一些操作
  */
-public class RefectGetFieldDemo {
+public class ReflectGetFieldDemo {
     public static void main(String[] args) throws Exception {
         Class clazz = Class.forName("com.wx.refect.Student");
         Student student1 =new Student();
