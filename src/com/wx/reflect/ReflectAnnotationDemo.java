@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
  */
 public class ReflectAnnotationDemo {
     public static void main(String[] args) throws Exception {
-        Class<?> s = Class.forName("com.wx.refect.Student2");
+        Class<?> s = Class.forName("com.wx.reflect.Student2");
         //通过反射获取注解
         Annotation[] annotations = s.getAnnotations();
         for (Annotation annotation : annotations) {
